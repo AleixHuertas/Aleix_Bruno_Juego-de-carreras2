@@ -5,6 +5,8 @@
 bool gameOver = false;
 char player1 = 'X';
 char player2 = 'O';
+int player1Pos;
+int player2Pos;
 int playerTurn = 1;
 int tablero[CASILLAS];
 int objetos;
@@ -37,11 +39,10 @@ void tableroimprimir() {
 }
 
 void movimientoPlayer1() {
-	tablero[dado] = 55; // x
+	tablero[player1Pos += dado] = 55; // x
 }
 
 int main() {
-	
 	tiroDado();
 	iniciartablero();
 	tableroimprimir();
@@ -61,6 +62,8 @@ int main() {
 		}
 		tableroimprimir();
 		Sleep(2000);
+		iniciartablero();
+
 
 	}
 }
