@@ -1,6 +1,9 @@
 #include <iostream>
 #define CASILLAS 50
-
+bool gameOver = false;
+char player1 = 'X';
+char player2 = 'O';
+int playerTurn = 1;
 
 void tiroDado() {
 	srand(time(0));
@@ -21,7 +24,17 @@ void tableroimprimir() {
 int main() {
 	char tablero[CASILLAS];
 	int objetos;
-	int player1, player2;
 	tiroDado();
 	tableroimprimir();
+	while (!gameOver)
+	{
+		if (playerTurn == 1)
+		{
+
+		}
+		else if (playerTurn == 2)
+		{
+
+		}
+	}
 }
